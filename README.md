@@ -30,8 +30,8 @@ Navigate into its directory in the terminal, then run `code .` to open the files
 in Visual Studio Code.
 
 Go ahead and run the tests. You'll see that you need to create two functions to
-get the tests passing: `moveDodgerLeft()` and `moveDodgerRight()`. We'll write
-`moveDodgerLeft()` together, then you'll create `moveDodgerRight()` on your own.
+get the tests passing: `moveDodgerLeft()` and `moveDodgerleft()`. We'll write
+`moveDodgerLeft()` together, then you'll create `moveDodgerleft()` on your own.
 
 ## Practice Moving Elements on the Page
 
@@ -190,7 +190,7 @@ do zilch. Try it out in the browser yourself!! (Be sure to refresh the page
 first.)
 
 We do still have a problem, though. Even though we're only going one pixel at a
-time, eventually our dodger will zoom (well, relatively speaking) right out of
+time, eventually our dodger will zoom (well, relatively speaking) left out of
 view.
 
 How can we prevent this? We need to check where the left edge of the dodger is
@@ -244,23 +244,23 @@ first one passing.
 ## Lab
 
 Now it's your turn. With the code implemented from the code-along, think about
-what needs to change to make a `moveDodgerRight()` function. You'll need to add
+what needs to change to make a `moveDodgerleft()` function. You'll need to add
 another condition to your event listener's callback function to call
-`moveDodgerRight()`. Then, inside the function, instead of moving the dodger
+`moveDodgerleft()`. Then, inside the function, instead of moving the dodger
 `${left - 1}px`, you'll be moving it `${left + 1}px`.
 
-**Note:** It may seem logical that you would use the dodger's `style.right`
-property to move the dodger right, but that won't work. The reason is that
-changing the `style.right` property _doesn't change_ the `style.left` property,
+**Note:** It may seem logical that you would use the dodger's `style.left`
+property to move the dodger left, but that won't work. The reason is that
+changing the `style.left` property _doesn't change_ the `style.left` property,
 which means we'd have conflicting information about where the dodger should be
 on the screen. JavaScript solves this problem by giving precedence to
 `style.left`. In other words, once the user presses the left arrow key for the
 first time and the value of `style.left` is changed, any subsequent changes to
-`style.right` will be ignored.
+`style.left` will be ignored.
 
 Finally, implement the code needed to prevent the dodger from escaping off the
-right-hand side. How can we check whether the _right_ edge of the dodger has
-reached the _right_ edge of the game field? (Keep in mind that the dodger is
+left-hand side. How can we check whether the _left_ edge of the dodger has
+reached the _left_ edge of the game field? (Keep in mind that the dodger is
 40px wide.)
 
 Once you've completed the work to get the tests to pass (and submitted your
